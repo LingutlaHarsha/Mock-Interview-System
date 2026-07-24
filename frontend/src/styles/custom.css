@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-heading: 'Outfit', 'Nunito', sans-serif;
+    --font-body: 'Outfit', 'Inter', sans-serif;
+    
+    /* Vibrant Colorful Palette */
+    --primary-indigo: #4f46e5;
+    --primary-blue: #2563eb;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-coral: #f43f5e;
+    --accent-violet: #8b5cf6;
+    
+    --body-bg: #f8fafc;
+    --card-bg: #ffffff;
+}
+
+html, body, #root {
+    min-height: 100vh;
+    background-color: var(--body-bg) !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body) !important;
+    background-color: var(--body-bg) !important;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+/* Matching <p> Paragraph Text Style */
+p, .p-text {
+    font-family: var(--font-body) !important;
+    color: #475569;
+    line-height: 1.65;
+    font-size: 0.94rem;
+}
+
+/* Smooth Soft-Edged Rounded Outfit Headings (No Sharp Serifs) */
+h1, h2, h3, h4, h5, h6, .hero-title, .section-heading, .font-serif, .auth-title, .navbar-brand {
+    font-family: var(--font-heading) !important;
+    letter-spacing: -0.015em;
+    font-weight: 700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Bright Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Auth Page Layout - Sky Blue Background Image */
+.auth-bg-bright {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.45) 0%, rgba(2, 132, 199, 0.65) 100%), url('/login_skyblue_bg.png') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.auth-light-card {
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 20px 45px -10px rgba(79, 70, 229, 0.18), 0 0 25px rgba(255, 255, 255, 0.8) !important;
+    border-radius: 1.5rem !important;
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.auth-input-light {
+    background: #ffffff !important;
+    border: 1.5px solid #cbd5e1 !important;
+    color: #0f172a !important;
+    border-radius: 0.75rem !important;
+    padding: 0.75rem 1rem !important;
+    font-weight: 500;
+    transition: all 0.2s ease !important;
+}
+
+.auth-input-light:focus {
+    border-color: #4f46e5 !important;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15) !important;
+}
+
+/* Card Hover & Elevation */
+.card {
+    border-radius: 1rem !important;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px -6px rgba(79, 70, 229, 0.08) !important;
+}
+
+.hover-lift {
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease !important;
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.12) !important;
+}
+
+.shadow-2xs {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.extra-small {
+    font-size: 0.8rem !important;
+}
+
+/* Vibrant Button Styling */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    border: none !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    border: none !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%) !important;
+    border: none !important;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    border: none !important;
+}
+
+.btn {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}

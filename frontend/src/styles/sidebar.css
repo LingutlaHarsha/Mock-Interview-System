@@ -1,0 +1,51 @@
+/* ===== Colorful Vibrant Sidebar Styling ===== */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1e1b4b 0%, #2e1065 50%, #4338ca 100%) !important;
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 4px 0 25px rgba(67, 56, 202, 0.25) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .nav-link {
+    color: #e0e7ff !important;
+    border-radius: 0.75rem !important;
+    padding: 0.75rem 1.1rem !important;
+    font-weight: 600;
+    font-size: 0.925rem;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+.sidebar .nav-link.active {
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(56, 189, 248, 0.45) !important;
+    font-weight: 700;
+}
+
+.sidebar .nav-link.active.bg-success {
+    background: linear-gradient(135deg, #34d399 0%, #059669 100%) !important;
+    box-shadow: 0 4px 16px rgba(52, 211, 153, 0.45) !important;
+}
+
+.sidebar .nav-link.active.bg-danger {
+    background: linear-gradient(135deg, #fb7185 0%, #e11d48 100%) !important;
+    box-shadow: 0 4px 16px rgba(251, 113, 133, 0.45) !important;
+}
