@@ -56,7 +56,7 @@ const ProtectedRoute = ({ children, allowedRole }) => {
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
 
                 {/* Public Routes */}
