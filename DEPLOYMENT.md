@@ -1,63 +1,57 @@
 # Deployment Guide - Mock Interview System
 
-This repository is set up with automated deployment for the **Frontend** using **Vercel** or **GitHub Pages**, and step-by-step instructions for deploying the **Django Backend**.
+This repository is configured to deploy **both the Frontend and Backend** on **Render.com** (via automated Blueprint) or **Vercel** + **Render**.
 
 ---
 
-## 🚀 1. Deploying Frontend to Vercel (Recommended)
+## ⚡ 1. Deploy Both on Render.com (Recommended - One Click Blueprint)
 
-1. Go to [Vercel](https://vercel.com/) and sign in with GitHub.
-2. Click **Add New...** -> **Project**.
-3. Import repository: **`LingutlaHarsha/Mock-Interview-System`**.
-4. Configure Project:
-   - **Framework Preset**: `Vite`
-   - **Root Directory**: `frontend` (or leave default `./` as root `vercel.json` is provided)
-   - **Environment Variables**:
-     - `VITE_API_URL`: Your live backend URL (e.g. `https://your-backend.onrender.com`)
-5. Click **Deploy**.
+Because this repository includes `render.yaml`, Render can deploy **both the Django Backend and React Frontend** automatically with one click.
 
-> **Note**: `vercel.json` is included to handle SPA client-side routing rewrites so direct navigation and page reloads work smoothly.
-
----
-
-## 🌐 2. Deploying Frontend to GitHub Pages (Alternative)
-
-The frontend is built with React + Vite and is configured for GitHub Pages via GitHub Actions.
-
-### Steps to Enable GitHub Pages:
-1. Go to your GitHub repository: [Maheshuppara/Mock_interview_system_project](https://github.com/Maheshuppara/Mock_interview_system_project)
-2. Click **Settings** (top navigation bar).
-3. On the left sidebar, click **Pages** (under Code and automation).
-4. Under **Build and deployment** -> **Source**, change the selection from *Deploy from a branch* to **GitHub Actions**.
-5. Click **Save**.
-
-That's it! Every time you push changes to the `main` branch, GitHub Actions automatically builds the project and deploys it to:
-👉 **`https://maheshuppara.github.io/Mock_interview_system_project/`**
+### Steps:
+1. Create a free account at [Render.com](https://render.com/) and sign in with GitHub.
+2. Click **New +** (top right) &rarr; **Blueprint**.
+3. Select your repository: **`LingutlaHarsha/Mock-Interview-System`**.
+4. Render will read `render.yaml` and show:
+   - `mock-interview-backend` (Django Python Web Service)
+   - `mock-interview-frontend` (React Static Site, automatically wired to the backend)
+5. Click **Apply**.
+6. Render will build and deploy both services!
 
 ---
 
-## 🐍 2. Deploying Django Backend
+## 🛠️ 2. Deploying Separately on Render (Manual Option)
 
-Since GitHub Pages only hosts static files (HTML/JS/CSS), the Django backend must be deployed to a cloud platform like **Render.com** or **Railway.app**.
-
-### Option A: Render.com (Recommended & Free)
-1. Create a free account at [Render.com](https://render.com/).
-2. Click **New +** -> **Web Service**.
-3. Connect your GitHub repository `Mock_interview_system_project`.
-4. Configure the Web Service settings:
+### Backend (Django Web Service):
+1. On Render, click **New +** &rarr; **Web Service**.
+2. Connect `LingutlaHarsha/Mock-Interview-System`.
+3. Set the following:
    - **Root Directory**: `backend`
    - **Environment**: `Python 3`
-   - **Build Command**: `pip install -r requirements.txt && python manage.py migrate`
+   - **Build Command**: `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py loaddata initial_data.json`
    - **Start Command**: `gunicorn config.wsgi:application`
-5. Click **Create Web Service**.
+4. Click **Create Web Service**. Render gives you a URL (e.g. `https://mock-interview-backend.onrender.com`).
 
-### Option B: PythonAnywhere / Railway
-- Use `backend/requirements.txt` to install dependencies.
-- Database: Configure SQLite or MySQL environment variables in `backend/config/settings.py`.
-- Run migrations: `python manage.py migrate`.
+### Frontend (React Static Site):
+1. On Render, click **New +** &rarr; **Static Site**.
+2. Connect `LingutlaHarsha/Mock-Interview-System`.
+3. Set the following:
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `dist`
+4. Under **Environment Variables**:
+   - `VITE_API_URL`: Your backend URL (e.g. `https://mock-interview-backend.onrender.com`)
+5. Under **Redirects/Rewrites**:
+   - Add a rewrite: Source `/*` &rarr; Destination `/index.html` (Action: `Rewrite`).
+6. Click **Create Static Site**.
 
 ---
 
-## 🔄 3. Connecting Frontend to Live Backend
+## 🌐 3. Alternative: Deploy Frontend on Vercel + Backend on Render
 
-Once your backend is live (e.g. `https://your-backend.onrender.com`), update the API URL in `frontend/src/` (or via environment variables) so API requests target your live server instead of `http://127.0.0.1:8000`.
+If you prefer keeping the frontend on Vercel:
+1. Deploy Backend on Render as described in Step 2.
+2. In your Vercel Dashboard for `mock-interview-system-five`:
+   - Go to **Settings** &rarr; **Environment Variables**.
+   - Add `VITE_API_URL` with your Render backend URL (e.g. `https://mock-interview-backend.onrender.com`).
+   - Go to **Deployments** &rarr; **Redeploy**.

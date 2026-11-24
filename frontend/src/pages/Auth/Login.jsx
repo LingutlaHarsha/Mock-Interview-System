@@ -50,7 +50,9 @@ function Login() {
 
         } catch (error) {
             console.error(error.response?.data);
-            if (error.response?.data?.detail) {
+            if (!error.response || error.response.status === 404 || error.response.status >= 500) {
+                setErrorMsg("Backend server is not reachable. Please check your backend deployment and VITE_API_URL setting.");
+            } else if (error.response?.data?.detail) {
                 setErrorMsg(error.response.data.detail);
             } else {
                 setErrorMsg("Invalid username, password or role credentials.");

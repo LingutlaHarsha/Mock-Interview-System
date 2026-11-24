@@ -58,6 +58,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -132,9 +133,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https:\/\/.*\.onrender\.com$",
+    r"^https:\/\/.*\.vercel\.app$",
+]
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:5173",
     "http://localhost:5174",
@@ -154,6 +162,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5174",
     "http://127.0.0.1:5173",
     "http://127.0.0.1:5174",
+    "https://*.onrender.com",
+    "https://*.vercel.app",
 ]
 CORS_ALLOW_METHODS = [
     "DELETE",

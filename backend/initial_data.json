@@ -1,0 +1,1688 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$T5Neu7mvsdiJHCGRD4YDom$RDPkcuLw0G6j+hm2OgtEwj10P31oL+TSbHC3rPChFQ8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Harsha",
+    "first_name": "",
+    "last_name": "",
+    "email": "harshalingutla13@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T08:55:05.151Z",
+    "role": "student",
+    "is_approved": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$qpdrJeEU2tf8C4gLQ6jEUX$vzngzYr82mwMs55+bVJJ41NvKvaFVrXmdnOUV9C4Beg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Abhilash",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhiabhilash9652@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T09:20:15.005Z",
+    "role": "student",
+    "is_approved": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$GtXlNlcOEdCgrdOmR33D25$MP4LifuGWvW+mFUX1m2VCHW+T8CRoxuXH/nI1+/2tBA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Harshavardhan",
+    "first_name": "",
+    "last_name": "",
+    "email": "harshalingutla13@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-23T05:44:40.868Z",
+    "role": "faculty",
+    "is_approved": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$uiUdD88NctDn0CW8e0PcoH$PH2soUIe/ngZfL6SWy6yhcGhyjW5BfBlDFGMKEZf+Jw=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-11-23T05:52:07.315Z",
+    "role": "admin",
+    "is_approved": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "students.studentprofile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "full_name": "Harsha",
+    "roll_number": "20",
+    "branch": "General",
+    "year": "4",
+    "phone": "8074336892",
+    "cgpa": "7.91",
+    "skills": "python,java,sql,mongoDB,HTMl,CSS,JS",
+    "resume": "resumes/Harsha_Vardhan_Intern_Resume_1.docx"
+  }
+},
+{
+  "model": "students.studentprofile",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "full_name": "Abhilash",
+    "roll_number": "TEMP_2",
+    "branch": "General",
+    "year": "1",
+    "phone": "",
+    "cgpa": "0.00",
+    "skills": "",
+    "resume": ""
+  }
+},
+{
+  "model": "faculty.interviewslot",
+  "pk": 1,
+  "fields": {
+    "faculty": 3,
+    "title": "Technical Interview",
+    "interview_date": "2026-11-24",
+    "interview_time": "10:00:00",
+    "end_time": null,
+    "duration_minutes": 30,
+    "mode": "Offline",
+    "venue_or_link": "SRB 204",
+    "max_students": 1,
+    "remaining_seats": 0,
+    "status": "Booked"
+  }
+},
+{
+  "model": "faculty.interviewslot",
+  "pk": 2,
+  "fields": {
+    "faculty": 3,
+    "title": "HR Interview",
+    "interview_date": "2026-11-25",
+    "interview_time": "09:00:00",
+    "end_time": null,
+    "duration_minutes": 30,
+    "mode": "Offline",
+    "venue_or_link": "Placement Cell cabin-4",
+    "max_students": 1,
+    "remaining_seats": 0,
+    "status": "Completed"
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 1,
+  "fields": {
+    "student": 1,
+    "interview_slot": 1,
+    "booked_at": "2026-11-23T06:02:41.997Z",
+    "status": "Booked"
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 2,
+  "fields": {
+    "student": 1,
+    "interview_slot": 2,
+    "booked_at": "2026-11-23T06:02:43.714Z",
+    "status": "Completed"
+  }
+},
+{
+  "model": "feedback.feedback",
+  "pk": 1,
+  "fields": {
+    "booking": 2,
+    "rating": 4,
+    "technical": 3,
+    "communication": 3,
+    "problem_solving": 3,
+    "confidence": 3,
+    "body_language": 3,
+    "comments": "Good for Placements",
+    "strengths": "Excellent Python knowledge and SQL",
+    "improvements": "Java",
+    "recommendation": "Ready",
+    "created_at": "2026-11-23T06:27:27.128Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "title": "Account Approved",
+    "message": "Your faculty account has been approved by the administrator. You may now log in and manage interview slots.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:54:10.120Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode Medium Algorithms Contest\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:58:22.160Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode Medium Algorithms Contest\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:58:22.165Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-25.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:58:56.925Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-25.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:58:56.935Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-25.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:00.292Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 7,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-25.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:00.301Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-25.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:01.620Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 9,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-25.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:01.625Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:20.927Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 11,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"LeetCode DSA Qualifier (Easy)\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:20.935Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 12,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"Comprehensive LeetCode Data Structures Exam\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:42.164Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 13,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"Comprehensive LeetCode Data Structures Exam\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:42.170Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 14,
+  "fields": {
+    "user": 1,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"Comprehensive LeetCode Data Structures Exam\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:55.274Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 15,
+  "fields": {
+    "user": 2,
+    "title": "New Technical Assessment Available",
+    "message": "Faculty Harshavardhan created \"Comprehensive LeetCode Data Structures Exam\". Deadline: 2026-11-30.",
+    "is_read": false,
+    "created_at": "2026-11-23T05:59:55.282Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 16,
+  "fields": {
+    "user": 1,
+    "title": "Interview Request Submitted",
+    "message": "Your interview request for \"Technical Interview\" on 2026-11-24 has been submitted and is pending faculty approval.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:02:42.004Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 17,
+  "fields": {
+    "user": 3,
+    "title": "New Student Booking Request",
+    "message": "Student Harsha requested to attend your slot \"Technical Interview\". Please review student details to accept or decline.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:02:42.012Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 18,
+  "fields": {
+    "user": 1,
+    "title": "Interview Request Submitted",
+    "message": "Your interview request for \"HR Interview\" on 2026-11-25 has been submitted and is pending faculty approval.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:02:43.720Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 19,
+  "fields": {
+    "user": 3,
+    "title": "New Student Booking Request",
+    "message": "Student Harsha requested to attend your slot \"HR Interview\". Please review student details to accept or decline.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:02:43.728Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 20,
+  "fields": {
+    "user": 1,
+    "title": "Interview Request Approved!",
+    "message": "Faculty Harshavardhan has APPROVED your interview request for \"HR Interview\" on 2026-11-25. Venue/Link: Placement Cell cabin-4.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:03:17.213Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 21,
+  "fields": {
+    "user": 1,
+    "title": "Interview Request Approved!",
+    "message": "Faculty Harshavardhan has APPROVED your interview request for \"Technical Interview\" on 2026-11-24. Venue/Link: SRB 204.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:03:18.879Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 22,
+  "fields": {
+    "user": 1,
+    "title": "Coding Assessment Submitted",
+    "message": "Your submission for \"Comprehensive LeetCode Data Structures Exam\" scored 85.0/500 pts.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:22:11.243Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 23,
+  "fields": {
+    "user": 1,
+    "title": "Coding Assessment Submitted",
+    "message": "Your submission for \"LeetCode DSA Qualifier (Easy)\" scored 20.0/60 pts.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:24:25.131Z"
+  }
+},
+{
+  "model": "notifications.notification",
+  "pk": 24,
+  "fields": {
+    "user": 1,
+    "title": "Interview Feedback Received",
+    "message": "Faculty has submitted evaluation feedback for your interview \"HR Interview\". Recommendation: Ready.",
+    "is_read": false,
+    "created_at": "2026-11-23T06:27:27.157Z"
+  }
+},
+{
+  "model": "coding.codingassessment",
+  "pk": 1,
+  "fields": {
+    "faculty": 3,
+    "title": "LeetCode Medium Algorithms Contest",
+    "description": "",
+    "difficulty": "Medium",
+    "allowed_languages": [
+      "Python",
+      "Java",
+      "C",
+      "C++",
+      "JavaScript"
+    ],
+    "start_date": "2026-11-23",
+    "start_time": "09:00:00",
+    "deadline_date": "2026-11-30",
+    "deadline_time": "23:59:00",
+    "duration_minutes": 60,
+    "max_marks": 75,
+    "total_questions_allowed": 3,
+    "instructions": "1. Read all problem statements carefully.\n2. Ensure your code passes both visible and hidden test cases.",
+    "topics": [],
+    "visibility": "Public",
+    "branch_filter": "",
+    "year_filter": "",
+    "allowed_attempts": 1,
+    "status": "Active",
+    "created_at": "2026-11-23T05:58:22.143Z",
+    "updated_at": "2026-11-23T05:58:22.143Z"
+  }
+},
+{
+  "model": "coding.codingassessment",
+  "pk": 3,
+  "fields": {
+    "faculty": 3,
+    "title": "LeetCode DSA Qualifier (Easy)",
+    "description": "",
+    "difficulty": "Medium",
+    "allowed_languages": [
+      "Python",
+      "Java",
+      "C",
+      "C++",
+      "JavaScript"
+    ],
+    "start_date": "2026-11-23",
+    "start_time": "09:00:00",
+    "deadline_date": "2026-11-25",
+    "deadline_time": "23:59:00",
+    "duration_minutes": 60,
+    "max_marks": 60,
+    "total_questions_allowed": 3,
+    "instructions": "1. Read all problem statements carefully.\n2. Ensure your code passes both visible and hidden test cases.",
+    "topics": [],
+    "visibility": "Public",
+    "branch_filter": "",
+    "year_filter": "",
+    "allowed_attempts": 1,
+    "status": "Active",
+    "created_at": "2026-11-23T05:59:00.280Z",
+    "updated_at": "2026-11-23T05:59:00.280Z"
+  }
+},
+{
+  "model": "coding.codingassessment",
+  "pk": 7,
+  "fields": {
+    "faculty": 3,
+    "title": "Comprehensive LeetCode Data Structures Exam",
+    "description": "",
+    "difficulty": "Medium",
+    "allowed_languages": [
+      "Python",
+      "Java",
+      "C",
+      "C++",
+      "JavaScript"
+    ],
+    "start_date": "2026-11-23",
+    "start_time": "09:00:00",
+    "deadline_date": "2026-11-30",
+    "deadline_time": "23:59:00",
+    "duration_minutes": 60,
+    "max_marks": 500,
+    "total_questions_allowed": 5,
+    "instructions": "1. Read all problem statements carefully.\n2. Ensure your code passes both visible and hidden test cases.",
+    "topics": [],
+    "visibility": "Public",
+    "branch_filter": "",
+    "year_filter": "",
+    "allowed_attempts": 1,
+    "status": "Active",
+    "created_at": "2026-11-23T05:59:55.261Z",
+    "updated_at": "2026-11-23T05:59:55.261Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 1,
+  "fields": {
+    "assessment": 1,
+    "title": "Add Two Numbers (LeetCode #2)",
+    "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
+    "topic": "",
+    "constraints": "The number of nodes in each linked list is in the range [1, 100].\n0 <= Node.val <= 9",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "2 4 3\n5 6 4",
+        "output": "7 0 8",
+        "explanation": "342 + 465 = 807."
+      }
+    ],
+    "difficulty": "Medium",
+    "marks": 25,
+    "order": 1,
+    "created_at": "2026-11-23T05:58:22.197Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 2,
+  "fields": {
+    "assessment": 1,
+    "title": "Longest Substring Without Repeating Characters (LeetCode #3)",
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "topic": "",
+    "constraints": "0 <= s.length <= 5 * 10^4\ns consists of English letters, digits, symbols and spaces.",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "abcabcbb",
+        "output": "3",
+        "explanation": "The answer is 'abc', with the length of 3."
+      }
+    ],
+    "difficulty": "Medium",
+    "marks": 25,
+    "order": 1,
+    "created_at": "2026-11-23T05:58:22.280Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 3,
+  "fields": {
+    "assessment": 1,
+    "title": "Palindrome Number (LeetCode #9)",
+    "description": "Given an integer x, return true if x is a palindrome, and false otherwise.",
+    "topic": "",
+    "constraints": "-2^31 <= x <= 2^31 - 1",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "121",
+        "output": "true",
+        "explanation": "121 reads as 121 from left to right and right to left."
+      }
+    ],
+    "difficulty": "Easy",
+    "marks": 15,
+    "order": 1,
+    "created_at": "2026-11-23T05:58:22.370Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 6,
+  "fields": {
+    "assessment": 3,
+    "title": "Two Sum (LeetCode #1)",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "topic": "",
+    "constraints": "2 <= nums.length <= 10^4\n-10^9 <= nums[i] <= 10^9\n-10^9 <= target <= 10^9",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "2 7 11 15\n9",
+        "output": "0 1",
+        "explanation": "nums[0] + nums[1] == 9, so return 0 1"
+      }
+    ],
+    "difficulty": "Easy",
+    "marks": 20,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:00.337Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 7,
+  "fields": {
+    "assessment": 3,
+    "title": "Add Two Numbers (LeetCode #2)",
+    "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
+    "topic": "",
+    "constraints": "The number of nodes in each linked list is in the range [1, 100].\n0 <= Node.val <= 9",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "2 4 3\n5 6 4",
+        "output": "7 0 8",
+        "explanation": "342 + 465 = 807."
+      }
+    ],
+    "difficulty": "Medium",
+    "marks": 25,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:00.441Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 16,
+  "fields": {
+    "assessment": 7,
+    "title": "Two Sum (LeetCode #1)",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "topic": "",
+    "constraints": "2 <= nums.length <= 10^4\n-10^9 <= nums[i] <= 10^9\n-10^9 <= target <= 10^9",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "2 7 11 15\n9",
+        "output": "0 1",
+        "explanation": "nums[0] + nums[1] == 9, so return 0 1"
+      }
+    ],
+    "difficulty": "Easy",
+    "marks": 20,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:55.308Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 17,
+  "fields": {
+    "assessment": 7,
+    "title": "Add Two Numbers (LeetCode #2)",
+    "description": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
+    "topic": "",
+    "constraints": "The number of nodes in each linked list is in the range [1, 100].\n0 <= Node.val <= 9",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "2 4 3\n5 6 4",
+        "output": "7 0 8",
+        "explanation": "342 + 465 = 807."
+      }
+    ],
+    "difficulty": "Medium",
+    "marks": 25,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:55.399Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 18,
+  "fields": {
+    "assessment": 7,
+    "title": "Longest Substring Without Repeating Characters (LeetCode #3)",
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "topic": "",
+    "constraints": "0 <= s.length <= 5 * 10^4\ns consists of English letters, digits, symbols and spaces.",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "abcabcbb",
+        "output": "3",
+        "explanation": "The answer is 'abc', with the length of 3."
+      }
+    ],
+    "difficulty": "Medium",
+    "marks": 25,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:55.498Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 19,
+  "fields": {
+    "assessment": 7,
+    "title": "Palindrome Number (LeetCode #9)",
+    "description": "Given an integer x, return true if x is a palindrome, and false otherwise.",
+    "topic": "",
+    "constraints": "-2^31 <= x <= 2^31 - 1",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "121",
+        "output": "true",
+        "explanation": "121 reads as 121 from left to right and right to left."
+      }
+    ],
+    "difficulty": "Easy",
+    "marks": 15,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:55.588Z"
+  }
+},
+{
+  "model": "coding.codingquestion",
+  "pk": 20,
+  "fields": {
+    "assessment": 7,
+    "title": "Container With Most Water (LeetCode #11)",
+    "description": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water.",
+    "topic": "",
+    "constraints": "n == height.length\n2 <= n <= 10^5\n0 <= height[i] <= 10^4",
+    "input_format": "",
+    "output_format": "",
+    "example_input": "",
+    "example_output": "",
+    "explanation": "",
+    "examples": [
+      {
+        "input": "1 8 6 2 5 4 8 3 7",
+        "output": "49",
+        "explanation": "The max area of water the container can contain is 49."
+      }
+    ],
+    "difficulty": "Medium",
+    "marks": 25,
+    "order": 1,
+    "created_at": "2026-11-23T05:59:55.687Z"
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 1,
+  "fields": {
+    "question": 1,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 2,
+  "fields": {
+    "question": 1,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 3,
+  "fields": {
+    "question": 1,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 4,
+  "fields": {
+    "question": 1,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 5,
+  "fields": {
+    "question": 2,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 6,
+  "fields": {
+    "question": 2,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 7,
+  "fields": {
+    "question": 2,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 8,
+  "fields": {
+    "question": 2,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 9,
+  "fields": {
+    "question": 3,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 10,
+  "fields": {
+    "question": 3,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 11,
+  "fields": {
+    "question": 3,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 12,
+  "fields": {
+    "question": 3,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 21,
+  "fields": {
+    "question": 6,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 22,
+  "fields": {
+    "question": 6,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 23,
+  "fields": {
+    "question": 6,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 24,
+  "fields": {
+    "question": 6,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 25,
+  "fields": {
+    "question": 7,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 26,
+  "fields": {
+    "question": 7,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 27,
+  "fields": {
+    "question": 7,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 28,
+  "fields": {
+    "question": 7,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 61,
+  "fields": {
+    "question": 16,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 62,
+  "fields": {
+    "question": 16,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 63,
+  "fields": {
+    "question": 16,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 64,
+  "fields": {
+    "question": 16,
+    "input_data": "2 7 11 15\n9",
+    "expected_output": "0 1",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 65,
+  "fields": {
+    "question": 17,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 66,
+  "fields": {
+    "question": 17,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 67,
+  "fields": {
+    "question": 17,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 68,
+  "fields": {
+    "question": 17,
+    "input_data": "2 4 3\n5 6 4",
+    "expected_output": "7 0 8",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 69,
+  "fields": {
+    "question": 18,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 70,
+  "fields": {
+    "question": 18,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 71,
+  "fields": {
+    "question": 18,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 72,
+  "fields": {
+    "question": 18,
+    "input_data": "abcabcbb",
+    "expected_output": "3",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 73,
+  "fields": {
+    "question": 19,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 74,
+  "fields": {
+    "question": 19,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 75,
+  "fields": {
+    "question": 19,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 76,
+  "fields": {
+    "question": 19,
+    "input_data": "121",
+    "expected_output": "true",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 77,
+  "fields": {
+    "question": 20,
+    "input_data": "1 8 6 2 5 4 8 3 7",
+    "expected_output": "49",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 78,
+  "fields": {
+    "question": 20,
+    "input_data": "1 8 6 2 5 4 8 3 7",
+    "expected_output": "49",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 79,
+  "fields": {
+    "question": 20,
+    "input_data": "1 8 6 2 5 4 8 3 7",
+    "expected_output": "49",
+    "is_hidden": false
+  }
+},
+{
+  "model": "coding.codingtestcase",
+  "pk": 80,
+  "fields": {
+    "question": 20,
+    "input_data": "1 8 6 2 5 4 8 3 7",
+    "expected_output": "49",
+    "is_hidden": true
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 1,
+  "fields": {
+    "assessment": 7,
+    "student": 1,
+    "question": 16,
+    "language": "python",
+    "code": "\nclass Solution:\n    def solve(self, input_data):\n        nums = input_data[:-1]\n        target = input_data[-1]\n\n        d = {}\n\n        for i in range(len(nums)):\n            diff = target - nums[i]\n\n            if diff in d:\n                return str(d[diff]) + \" \" + str(i)\n\n            d[nums[i]] = i\n\n        return \"\"\n",
+    "score": 20.0,
+    "max_marks": 20.0,
+    "passed_test_cases": 4,
+    "total_test_cases": 4,
+    "execution_time_ms": 424.03,
+    "memory_kb": 437.6,
+    "attempt_number": 1,
+    "status": "Accepted",
+    "test_case_results": [
+      {
+        "test_case_id": 61,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 121.07,
+        "error_message": "",
+        "input": "2 7 11 15\n9",
+        "expected_output": "0 1",
+        "actual_output": "0 1"
+      },
+      {
+        "test_case_id": 62,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 110.38,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 63,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 101.15,
+        "error_message": "",
+        "input": "2 7 11 15\n9",
+        "expected_output": "0 1",
+        "actual_output": "0 1"
+      },
+      {
+        "test_case_id": 64,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 91.43,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:22:07.822Z"
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 2,
+  "fields": {
+    "assessment": 7,
+    "student": 1,
+    "question": 17,
+    "language": "python",
+    "code": "\nclass Solution:\n    def solve(self, input_data):\n        n = len(input_data) // 2\n\n        l1 = input_data[:n]\n        l2 = input_data[n:]\n\n        result = []\n        carry = 0\n\n        for i in range(n):\n            total = l1[i] + l2[i] + carry\n            result.append(total % 10)\n            carry = total // 10\n\n        if carry:\n            result.append(carry)\n\n        return \" \".join(map(str, result))\n",
+    "score": 25.0,
+    "max_marks": 25.0,
+    "passed_test_cases": 4,
+    "total_test_cases": 4,
+    "execution_time_ms": 401.54,
+    "memory_kb": 424.1,
+    "attempt_number": 1,
+    "status": "Accepted",
+    "test_case_results": [
+      {
+        "test_case_id": 65,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 112.06,
+        "error_message": "",
+        "input": "2 4 3\n5 6 4",
+        "expected_output": "7 0 8",
+        "actual_output": "7 0 8"
+      },
+      {
+        "test_case_id": 66,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 108.18,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 67,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 91.27,
+        "error_message": "",
+        "input": "2 4 3\n5 6 4",
+        "expected_output": "7 0 8",
+        "actual_output": "7 0 8"
+      },
+      {
+        "test_case_id": 68,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 90.03,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:22:08.240Z"
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 3,
+  "fields": {
+    "assessment": 7,
+    "student": 1,
+    "question": 18,
+    "language": "python",
+    "code": "\nclass Solution:\n    def solve(self, input_data):\n        s = input_data\n        seen = {}\n        left = 0\n        max_len = 0\n\n        for right in range(len(s)):\n            if s[right] in seen and seen[s[right]] >= left:\n                left = seen[s[right]] + 1\n\n            seen[s[right]] = right\n\n            max_len = max(max_len, right - left + 1)\n\n        return max_len\n",
+    "score": 25.0,
+    "max_marks": 25.0,
+    "passed_test_cases": 4,
+    "total_test_cases": 4,
+    "execution_time_ms": 430.95,
+    "memory_kb": 443.5,
+    "attempt_number": 1,
+    "status": "Accepted",
+    "test_case_results": [
+      {
+        "test_case_id": 69,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 93.81,
+        "error_message": "",
+        "input": "abcabcbb",
+        "expected_output": "3",
+        "actual_output": "3"
+      },
+      {
+        "test_case_id": 70,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 95.25,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 71,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 125.03,
+        "error_message": "",
+        "input": "abcabcbb",
+        "expected_output": "3",
+        "actual_output": "3"
+      },
+      {
+        "test_case_id": 72,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 116.86,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:22:08.682Z"
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 4,
+  "fields": {
+    "assessment": 7,
+    "student": 1,
+    "question": 19,
+    "language": "python",
+    "code": "\nclass Solution:\n    def solve(self, input_data):\n        s = str(input_data)\n\n        if s == s[::-1]:\n            return \"true\"\n        else:\n            return \"false\"\n",
+    "score": 15.0,
+    "max_marks": 15.0,
+    "passed_test_cases": 4,
+    "total_test_cases": 4,
+    "execution_time_ms": 632.18,
+    "memory_kb": 596.9,
+    "attempt_number": 1,
+    "status": "Accepted",
+    "test_case_results": [
+      {
+        "test_case_id": 73,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 171.34,
+        "error_message": "",
+        "input": "121",
+        "expected_output": "true",
+        "actual_output": "true"
+      },
+      {
+        "test_case_id": 74,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 110.41,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 75,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 123.15,
+        "error_message": "",
+        "input": "121",
+        "expected_output": "true",
+        "actual_output": "true"
+      },
+      {
+        "test_case_id": 76,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 227.28,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:22:09.334Z"
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 5,
+  "fields": {
+    "assessment": 7,
+    "student": 1,
+    "question": 20,
+    "language": "python",
+    "code": "# Write your Python solution below\nclass Solution:\n    def solve(self, input_data):\n        # Your algorithm logic here\n        return input_data\n",
+    "score": 0.0,
+    "max_marks": 25.0,
+    "passed_test_cases": 0,
+    "total_test_cases": 4,
+    "execution_time_ms": 1748.87,
+    "memory_kb": 1059.2,
+    "attempt_number": 1,
+    "status": "Wrong Answer",
+    "test_case_results": [
+      {
+        "test_case_id": 77,
+        "is_hidden": false,
+        "passed": false,
+        "execution_time_ms": 466.62,
+        "error_message": "",
+        "input": "1 8 6 2 5 4 8 3 7",
+        "expected_output": "49",
+        "actual_output": "1 8 6 2 5 4 8 3 7"
+      },
+      {
+        "test_case_id": 78,
+        "is_hidden": true,
+        "passed": false,
+        "execution_time_ms": 336.87,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 79,
+        "is_hidden": false,
+        "passed": false,
+        "execution_time_ms": 409.94,
+        "error_message": "",
+        "input": "1 8 6 2 5 4 8 3 7",
+        "expected_output": "49",
+        "actual_output": "1 8 6 2 5 4 8 3 7"
+      },
+      {
+        "test_case_id": 80,
+        "is_hidden": true,
+        "passed": false,
+        "execution_time_ms": 535.44,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:22:11.140Z"
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 6,
+  "fields": {
+    "assessment": 3,
+    "student": 1,
+    "question": 6,
+    "language": "python",
+    "code": "\nclass Solution:\n    def solve(self, input_data):\n        nums = input_data[:-1]\n        target = input_data[-1]\n\n        d = {}\n\n        for i in range(len(nums)):\n            diff = target - nums[i]\n\n            if diff in d:\n                return str(d[diff]) + \" \" + str(i)\n\n            d[nums[i]] = i\n\n        return \"\"\n",
+    "score": 20.0,
+    "max_marks": 20.0,
+    "passed_test_cases": 4,
+    "total_test_cases": 4,
+    "execution_time_ms": 551.66,
+    "memory_kb": 490.8,
+    "attempt_number": 1,
+    "status": "Accepted",
+    "test_case_results": [
+      {
+        "test_case_id": 21,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 143.53,
+        "error_message": "",
+        "input": "2 7 11 15\n9",
+        "expected_output": "0 1",
+        "actual_output": "0 1"
+      },
+      {
+        "test_case_id": 22,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 156.53,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 23,
+        "is_hidden": false,
+        "passed": true,
+        "execution_time_ms": 140.33,
+        "error_message": "",
+        "input": "2 7 11 15\n9",
+        "expected_output": "0 1",
+        "actual_output": "0 1"
+      },
+      {
+        "test_case_id": 24,
+        "is_hidden": true,
+        "passed": true,
+        "execution_time_ms": 111.27,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:24:24.632Z"
+  }
+},
+{
+  "model": "coding.codingsubmission",
+  "pk": 7,
+  "fields": {
+    "assessment": 3,
+    "student": 1,
+    "question": 7,
+    "language": "python",
+    "code": "# Write your Python solution below\nclass Solution:\n    def solve(self, input_data):\n        # Your algorithm logic here\n        return input_data\n",
+    "score": 0.0,
+    "max_marks": 25.0,
+    "passed_test_cases": 0,
+    "total_test_cases": 4,
+    "execution_time_ms": 460.46,
+    "memory_kb": 439.8,
+    "attempt_number": 1,
+    "status": "Wrong Answer",
+    "test_case_results": [
+      {
+        "test_case_id": 25,
+        "is_hidden": false,
+        "passed": false,
+        "execution_time_ms": 118.67,
+        "error_message": "",
+        "input": "2 4 3\n5 6 4",
+        "expected_output": "7 0 8",
+        "actual_output": "2 4 3 5 6 4"
+      },
+      {
+        "test_case_id": 26,
+        "is_hidden": true,
+        "passed": false,
+        "execution_time_ms": 103.36,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      },
+      {
+        "test_case_id": 27,
+        "is_hidden": false,
+        "passed": false,
+        "execution_time_ms": 122.51,
+        "error_message": "",
+        "input": "2 4 3\n5 6 4",
+        "expected_output": "7 0 8",
+        "actual_output": "2 4 3 5 6 4"
+      },
+      {
+        "test_case_id": 28,
+        "is_hidden": true,
+        "passed": false,
+        "execution_time_ms": 115.92,
+        "error_message": "",
+        "input": "[Hidden]",
+        "expected_output": "[Hidden]",
+        "actual_output": "[Hidden]"
+      }
+    ],
+    "manual_remarks": "",
+    "submitted_at": "2026-11-23T06:24:25.106Z"
+  }
+},
+{
+  "model": "coding.codingresult",
+  "pk": 1,
+  "fields": {
+    "assessment": 7,
+    "student": 1,
+    "attempt_number": 1,
+    "total_score": 85.0,
+    "max_score": 500.0,
+    "percentage": 17.0,
+    "status": "Completed",
+    "started_at": "2026-11-23T06:22:11.191Z",
+    "completed_at": "2026-11-23T06:22:11.192Z"
+  }
+},
+{
+  "model": "coding.codingresult",
+  "pk": 2,
+  "fields": {
+    "assessment": 3,
+    "student": 1,
+    "attempt_number": 1,
+    "total_score": 20.0,
+    "max_score": 60.0,
+    "percentage": 33.3,
+    "status": "Completed",
+    "started_at": "2026-11-23T06:24:25.119Z",
+    "completed_at": "2026-11-23T06:24:25.119Z"
+  }
+}
+]

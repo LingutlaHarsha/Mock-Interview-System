@@ -1,13 +1,22 @@
 import axios from "axios";
 
 export const getBackendUrl = () => {
-    return import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/+$/, "") : "";
+    let url = import.meta.env.VITE_API_URL;
+    if (!url) return "";
+    url = url.trim().replace(/\/+$/, "");
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = `https://${url}`;
+    }
+    return url;
+};
+
+const getBaseURL = () => {
+    const backend = getBackendUrl();
+    return backend ? `${backend}/api/` : "/api/";
 };
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL
-        ? `${import.meta.env.VITE_API_URL.replace(/\/+$/, "")}/api/`
-        : "/api/",
+    baseURL: getBaseURL(),
 });
 
 // Request interceptor: attach JWT access token
