@@ -70,7 +70,7 @@ function Dashboard() {
                     <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
                         <div>
                             <span className="badge bg-white bg-opacity-20 text-info px-3 py-1 rounded-pill fw-bold mb-2">
-                                Student Placement Portal
+                                Mock Interview System
                             </span>
                             <h2 className="fw-bold m-0">Welcome Back, {student_name || "Student"}! 👋</h2>
                             <p className="text-white-50 m-0 mt-1">

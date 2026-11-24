@@ -68,7 +68,7 @@ function Login() {
                     <div className="d-inline-flex align-items-center justify-content-center p-3 bg-primary bg-opacity-10 text-primary rounded-circle mb-2 shadow-sm border border-primary border-opacity-20">
                         <span className="fs-1">🎓</span>
                     </div>
-                    <h3 className="fw-bold text-dark mb-1" style={{ color: "#1e1b4b" }}>AI Placement Portal</h3>
+                    <h3 className="fw-bold text-dark mb-1" style={{ color: "#1e1b4b" }}>Mock Interview System</h3>
                     <p className="text-muted small">Mock Interview & Technical Assessment System</p>
                 </div>
 

@@ -74,7 +74,7 @@ const Register = () => {
                         <span className="fs-1">🎓</span>
                     </div>
                     <h3 className="fw-bold text-dark mb-1" style={{ color: "#1e1b4b" }}>Create Account</h3>
-                    <p className="text-muted small">AI Mock Interview Placement Portal</p>
+                    <p className="text-muted small">Mock Interview System</p>
                 </div>
 
                 {successMsg && (

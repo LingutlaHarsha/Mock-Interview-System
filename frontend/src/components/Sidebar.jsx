@@ -17,7 +17,7 @@ function Sidebar({ activeRole }) {
                     <FaUserGraduate className="fs-4" />
                 </div>
                 <div>
-                    <h5 className="m-0 fw-bold text-white fs-6">Placement Portal</h5>
+                    <h5 className="m-0 fw-bold text-white fs-6">Mock Interview System</h5>
                     <span className="badge bg-white bg-opacity-10 text-info extra-small px-2 py-0.5 rounded-pill text-uppercase">
                         {role} Panel
                     </span>

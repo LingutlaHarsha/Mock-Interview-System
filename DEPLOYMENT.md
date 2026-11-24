@@ -1,10 +1,26 @@
-# Deployment Guide - AI Mock Interview System
+# Deployment Guide - Mock Interview System
 
-This repository is set up with automated deployment for the **Frontend** using **GitHub Pages & GitHub Actions**, and step-by-step instructions for deploying the **Django Backend**.
+This repository is set up with automated deployment for the **Frontend** using **Vercel** or **GitHub Pages**, and step-by-step instructions for deploying the **Django Backend**.
 
 ---
 
-## 🌐 1. Deploying Frontend to GitHub Pages (Automated)
+## 🚀 1. Deploying Frontend to Vercel (Recommended)
+
+1. Go to [Vercel](https://vercel.com/) and sign in with GitHub.
+2. Click **Add New...** -> **Project**.
+3. Import repository: **`LingutlaHarsha/Mock-Interview-System`**.
+4. Configure Project:
+   - **Framework Preset**: `Vite`
+   - **Root Directory**: `frontend` (or leave default `./` as root `vercel.json` is provided)
+   - **Environment Variables**:
+     - `VITE_API_URL`: Your live backend URL (e.g. `https://your-backend.onrender.com`)
+5. Click **Deploy**.
+
+> **Note**: `vercel.json` is included to handle SPA client-side routing rewrites so direct navigation and page reloads work smoothly.
+
+---
+
+## 🌐 2. Deploying Frontend to GitHub Pages (Alternative)
 
 The frontend is built with React + Vite and is configured for GitHub Pages via GitHub Actions.
 

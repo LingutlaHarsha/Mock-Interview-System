@@ -28,7 +28,7 @@ function Navbar({ title, userName, userRole }) {
                 <div className="p-2 bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center">
                     <FaGraduationCap className="fs-4" />
                 </div>
-                <h4 className="m-0 text-dark fw-bold" style={{ fontSize: "1.25rem", tracking: "-0.02em" }}>{title || "Placement Interview Portal"}</h4>
+                <h4 className="m-0 text-dark fw-bold" style={{ fontSize: "1.25rem", tracking: "-0.02em" }}>{title || "Mock Interview System"}</h4>
             </div>
 
             <div className="d-flex align-items-center gap-3">
