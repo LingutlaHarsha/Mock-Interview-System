@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import { getBookedStudents, submitFeedback, approveBooking, rejectBooking } from "../../services/facultyService";
+import { getBackendUrl } from "../../services/api";
 import { FaUsers, FaFilePdf, FaStar, FaCheckCircle, FaExclamationCircle, FaCheck, FaTimes, FaUser, FaGraduationCap, FaFilter, FaSortAmountDown } from "react-icons/fa";
 
 function BookedStudents() {
@@ -263,7 +264,7 @@ function BookedStudents() {
                                             <td>
                                                 {b.student_resume ? (
                                                     <a
-                                                        href={b.student_resume.startsWith("http") ? b.student_resume : `http://127.0.0.1:8000${b.student_resume}`}
+                                                        href={b.student_resume.startsWith("http") ? b.student_resume : `${getBackendUrl() || 'http://127.0.0.1:8000'}${b.student_resume}`}
                                                         target="_blank"
                                                         rel="noreferrer"
                                                         className="btn btn-outline-primary btn-sm fw-bold rounded-pill px-3"
@@ -379,7 +380,7 @@ function BookedStudents() {
                                             <div className="text-muted small mb-2">Uploaded Resume</div>
                                             {viewingStudent.student_resume ? (
                                                 <a
-                                                    href={viewingStudent.student_resume.startsWith("http") ? viewingStudent.student_resume : `http://127.0.0.1:8000${viewingStudent.student_resume}`}
+                                                    href={viewingStudent.student_resume.startsWith("http") ? viewingStudent.student_resume : `${getBackendUrl() || 'http://127.0.0.1:8000'}${viewingStudent.student_resume}`}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                     className="btn btn-outline-primary btn-sm fw-bold rounded-pill px-3"

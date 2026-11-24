@@ -7,6 +7,7 @@ import {
     updateStudentProfile,
     uploadResume,
 } from "../../services/studentService";
+import { getBackendUrl } from "../../services/api";
 import ChangePasswordCard from "../../components/ChangePasswordCard";
 import { FaUserGraduate, FaFilePdf, FaFileUpload, FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
@@ -202,7 +203,7 @@ function Profile() {
 
                                 {profile.resume ? (
                                     <a
-                                        href={profile.resume.startsWith("http") ? profile.resume : `http://127.0.0.1:8000${profile.resume}`}
+                                        href={profile.resume.startsWith("http") ? profile.resume : `${getBackendUrl() || 'http://127.0.0.1:8000'}${profile.resume}`}
                                         target="_blank"
                                         rel="noreferrer"
                                         className="btn btn-outline-primary fw-bold rounded-pill px-4"

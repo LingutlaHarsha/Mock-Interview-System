@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import { getBookedStudents, submitFeedback } from "../../services/facultyService";
+import { getBackendUrl } from "../../services/api";
 import {
     FaCalendarCheck, FaUserGraduate, FaClock, FaVideo, FaMapMarkerAlt,
     FaStar, FaFilePdf, FaCheckCircle, FaExclamationCircle, FaUser, FaGraduationCap
@@ -211,7 +212,7 @@ function FacultyUpcomingInterviews() {
                                             <div className="pt-2 border-top d-flex gap-2 align-items-center">
                                                 {b.student_resume ? (
                                                     <a
-                                                        href={b.student_resume.startsWith('http') ? b.student_resume : `http://127.0.0.1:8000${b.student_resume}`}
+                                                        href={b.student_resume.startsWith('http') ? b.student_resume : `${getBackendUrl() || 'http://127.0.0.1:8000'}${b.student_resume}`}
                                                         target="_blank"
                                                         rel="noreferrer"
                                                         className="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold"

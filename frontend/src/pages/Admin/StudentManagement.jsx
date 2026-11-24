@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import {
     getAdminStudents, createStudent, deleteStudent, resetStudentPassword
 } from "../../services/adminService";
+import { getBackendUrl } from "../../services/api";
 import {
     FaUsers, FaSearch, FaFilePdf, FaPlus, FaTrash, FaKey,
     FaCheckCircle, FaExclamationCircle, FaUserGraduate
@@ -223,7 +224,7 @@ function StudentManagement() {
                                             <td className="py-3">
                                                 {s.resume ? (
                                                     <a
-                                                        href={s.resume.startsWith("http") ? s.resume : `http://127.0.0.1:8000${s.resume}`}
+                                                        href={s.resume.startsWith("http") ? s.resume : `${getBackendUrl() || 'http://127.0.0.1:8000'}${s.resume}`}
                                                         target="_blank"
                                                         rel="noreferrer"
                                                         className="btn btn-outline-primary btn-sm fw-bold rounded-pill px-3 shadow-2xs"

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 import { getStudentProfile, uploadResume } from "../../services/studentService";
+import { getBackendUrl } from "../../services/api";
 import { FaFilePdf, FaCloudUploadAlt, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 
 function Resume() {
@@ -137,7 +138,7 @@ function Resume() {
                                             <p className="text-muted small">Your resume is active and visible to interview faculty members.</p>
 
                                             <a
-                                                href={currentResume.startsWith("http") ? currentResume : `http://127.0.0.1:8000${currentResume}`}
+                                                href={currentResume.startsWith("http") ? currentResume : `${getBackendUrl() || 'http://127.0.0.1:8000'}${currentResume}`}
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="btn btn-outline-primary fw-bold w-100 py-2 rounded-3"
